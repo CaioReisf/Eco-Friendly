@@ -250,13 +250,18 @@ header ul a:hover{
     align-items: center;
     justify-content: center;
     gap: 30px;
+    flex-flow: row wrap;
 }
 
 /*===== QUARTA SECAO =====*/
 
 #s4{
     background-color: var(--verde-texto);
-    margin-top: 10%;
+    margin-top: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
 
 }
 #s4 h1{
@@ -264,6 +269,7 @@ header ul a:hover{
     color: var(--verde-apagado-escuro);
     font-size: 7rem;
     line-height: 70px;
+   
 }
 #s4 h1 span{
     font-family: var(--fontgrande);
@@ -271,8 +277,257 @@ header ul a:hover{
 }
 
 #s4 p{
-    text-align: end;
+    text-align: start;
     font-family: var(--fontpequiena);
     font-size: 1.4rem;
-    color: ;
+    color: var(--verde-escuro);
+    font-size: 1.5rem;
+    margin-top: 0px;
+    border: var(--verde-escuro) 5px solid;
+    border-radius: 20px;
+    padding: 15px;
+    width: 100%;
+
+}
+#s4 div{
+    align-self: flex-end;
+
+}
+#s4 img{
+    align-self: start;
+    margin: 20px;
+}
+#s4 .fotos{
+    display: flex;
+    flex-flow:row wrap;
+    align-self: flex-start;
+
+}
+
+/*===== QUINTA SECAO =====*/
+
+#s5{
+    color: var(--verde-escuro);
+    font-family: "Titan One", sans-serif;
+    font-size: 7rem;
+    align-self: flex-start;
+    margin-left: 10%;
+    margin-top: 14%;
+    line-height: 95px;
+
+
+}
+
+#s5 h1 span{
+    font-family: "Special Elite", system-ui;
+    text-transform: uppercase;
+
+}
+
+#s5 .titulo{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-flow: row nowrap;
+    gap: 70px;
+}
+#s5 .titulo i{
+    font-size: 10rem;
+    color: var(--verde-apagado-escuro);
+
+}
+
+#s5 input{
+    background-color: var(--verde-apagado-escuro);
+    color: var(--verde-texto);
+    padding: 15px;
+    border-radius: 100px;
+    cursor: pointer;
+    border: none;
+    font-family:var(--fontgrande) ;
+    font-size: 1.4rem;
+    transition: all .3s ease;
+}
+#s5 input:hover{
+    background-color: #243e36;
+    box-shadow: black 5px 5px 5px;
+}
+#s5 input:active{
+    background-color: var(--verde-apagado-claro);
+}
+
+/*===== FOOTER =====*/
+
+footer{
+    text-align: center;
+    font-family: var(--fontpequiena);
+    background-color: #243e36;
+    color: var(--verde-texto);
+    padding: 10px;
+    width: 100%;
+    margin-top: 50px;
+    
+}
+
+/* ================== RESPONSIVIDADE ================== */
+
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+    header {
+        width: 80%;
+    }
+    header ul {
+        gap: 25px;
+        font-size: 1.2rem;
+    }
+
+    #s1, #s5 {
+        font-size: 4.5rem;
+        margin-left: 5%;
+        line-height: 70px;
+    }
+    #s1 .titulo, #s5 .titulo {
+        flex-flow: column nowrap;
+        gap: 30px;
+        text-align: center;
+    }
+
+    #s2 h1 {
+        font-size: 5rem;
+        line-height: 50px;
+        text-align: center;
+    }
+    #s2 .txt-icon {
+        flex-flow: column nowrap;
+        gap: 40px;
+        text-align: center;
+    }
+    #s2 .txt-icon p {
+        width: 80%;
+    }
+    #s2 .txt-icon i {
+        font-size: 10rem;
+    }
+
+    #s3 h1 {
+        font-size: 5rem;
+    }
+    #s3 .card {
+        width: 230px;
+        padding: 30px;
+    }
+    #s3 .card i {
+        font-size: 12rem;
+    }
+
+    #s4 h1 {
+        font-size: 5rem;
+    }
+    #s4 p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Celulares grandes (até 768px) */
+@media (max-width: 768px) {
+    header {
+        width: 95%;
+        border-radius: 50px;
+    }
+    header ul {
+        flex-flow: column nowrap;
+        gap: 15px;
+        font-size: 1.1rem;
+    }
+
+    #s1, #s5 {
+        font-size: 3.5rem;
+        text-align: center;
+        margin: 80px auto;
+        line-height: 60px;
+    }
+    #s1 .titulo i, #s5 .titulo i {
+        font-size: 6rem;
+    }
+
+    #s2 h1 {
+        font-size: 4rem;
+        line-height: 40px;
+    }
+    #s2 .txt-icon p {
+        width: 95%;
+        font-size: 1.4rem;
+    }
+
+    #s3 h1 {
+        font-size: 4rem;
+        margin: 15% auto;
+    }
+    #s3 .cards {
+        flex-flow: column nowrap;
+    }
+    #s3 .card {
+        width: 90%;
+        max-width: 350px;
+    }
+    #s3 .card p {
+        font-size: 1.1rem;
+    }
+
+    #s4 h1 {
+        font-size: 3.5rem;
+        line-height: 45px;
+        text-align: center;
+    }
+    #s4 p {
+        width: 90%;
+        font-size: 1.1rem;
+    }
+    #s4 .fotos {
+        justify-content: center;
+    }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+    #s1, #s5 {
+        font-size: 2.8rem;
+        line-height: 45px;
+    }
+    #s1 .titulo i, #s5 .titulo i {
+        font-size: 4rem;
+    }
+
+    #s2 h1 {
+        font-size: 3rem;
+        line-height: 35px;
+    }
+    #s2 .txt-icon i {
+        font-size: 7rem;
+    }
+    #s2 .txt-icon p {
+        font-size: 1.1rem;
+    }
+
+    #s3 h1 {
+        font-size: 3rem;
+        line-height: 40px;
+    }
+    #s3 .card {
+        width: 95%;
+        padding: 20px;
+    }
+    #s3 .card h2 {
+        font-size: 1.2rem;
+    }
+    #s3 .card p {
+        font-size: 1rem;
+    }
+
+    #s4 h1 {
+        font-size: 3rem;
+    }
+    #s4 p {
+        font-size: 1rem;
+    }
 }
