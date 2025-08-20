@@ -531,3 +531,56 @@ footer{
         font-size: 1rem;
     }
 }
+
+
+/*===== FORMULARIOS =====*/
+
+#forms{
+    margin:11% ;  
+    text-align: center;
+    color: var(--verde-texto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 50px;
+    
+    
+}
+.doacao{
+    background-color: var(--verde-escuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: 5px; 
+    font-family: var(--fontpequiena);
+    padding: 50px;
+    border-radius: 25px;
+ 
+
+}
+#forms input{
+    padding: 10px;
+    background-color: #7ca9824f;
+    border: var(--verde-apagado-escuro) 2px solid;
+    border-radius: 100px;
+    width: 100%;
+    font-family: var(--fontpequiena);
+}
+
+.doe{
+    color: var(--verde-texto);
+    cursor: pointer;
+    font-family: var(--fontgrande);
+}
+
+
+/* segundo formulario*/
+
+.enviar{
+    color: var(--verde-texto);
+    cursor: pointer;
+    font-family: var(--fontgrande);
+
+}
