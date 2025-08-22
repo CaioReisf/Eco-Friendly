@@ -535,8 +535,10 @@ footer{
 
 /*===== FORMULARIOS =====*/
 
-#forms{
-    margin:11% ;  
+/*===== FORMULÁRIOS =====*/
+
+#forms {
+    margin: 11%;
     text-align: center;
     color: var(--verde-texto);
     display: flex;
@@ -544,70 +546,110 @@ footer{
     justify-content: center;
     flex-flow: row wrap;
     gap: 50px;
-    
-    
 }
-.doacao{
+
+/* === CAIXA DE DOAÇÃO === */
+.doacao {
     background-color: var(--verde-escuro);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column nowrap;
-    gap: 5px; 
+    gap: 12px;
     font-family: var(--fontpequiena);
-    padding: 50px;
-    border-radius: 25px;
- 
-
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-#forms input{
-    padding: 10px;
+
+.doacao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* === CAMPOS DE TEXTO === */
+#doe,
+#enviar,
+#forms input {
+    padding: 12px;
     background-color: #7ca9824f;
-    border: var(--verde-apagado-escuro) 2px solid;
+    border: 2px solid var(--verde-apagado-escuro);
     border-radius: 100px;
     width: 100%;
     font-family: var(--fontpequiena);
     color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
 }
-#doe{
+
+/* Efeito ao focar no input */
+#forms input:focus {
+    border-color: var(--verde-texto);
+    background-color: rgba(124, 169, 130, 0.2);
+    box-shadow: 0 0 8px var(--verde-apagado-escuro);
+}
+
+/* === BOTÕES === */
+#doe,
+#enviar {
     color: var(--verde-texto);
     cursor: pointer;
-    font-family: var(--fontgrande);
-    padding: 10px;
+    font-weight: bold;
     background-color: #7ca9824f;
-    border: var(--verde-apagado-escuro) 2px solid;
-    border-radius: 100px;
-    width: 100%;
-    font-family: var(--fontpequiena);
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
-#doe:hover{
+
+#doe:hover,
+#enviar:hover {
     transform: translateY(-3px);
-    background-color: var(--verde-escuro);
-}#doe:active{
     background-color: var(--verde-apagado-escuro);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-
-/* segundo formulario*/
-
-#enviar{
-    color: var(--verde-texto);
-    cursor: pointer;
-    font-family: var(--fontgrande);
-    padding: 10px;
-    background-color: #7ca9824f;
-    border: var(--verde-apagado-escuro) 2px solid;
-    border-radius: 100px;
-    width: 100%;
-    font-family: var(--fontpequiena);
-    transition: all .3s ease;
-
-}
-#enviar:hover{
-    transform: translateY(-3px);
+#doe:active,
+#enviar:active {
     background-color: var(--verde-escuro);
+    transform: scale(0.97);
 }
-#enviar:active{
-    background-color: var(--verde-apagado-escuro);
+
+/* === MENSAGENS DE SUCESSO E ERRO === */
+#outres {
+    font-size: 1rem;
+    margin-top: 10px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    max-width: 300px;
+    transition: all 0.3s ease;
+}
+
+/* Mensagem de sucesso */
+#outres.sucesso {
+    color: #d4f8e8;
+    background-color: #2e7d32;
+    box-shadow: 0 0 10px rgba(46, 125, 50, 0.6);
+}
+
+/* Mensagem de erro */
+#outres.erro {
+    color: #ffebee;
+    background-color: #c62828;
+    box-shadow: 0 0 10px rgba(198, 40, 40, 0.6);
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 500px) {
+    .doacao {
+        width: 90%;
+        padding: 25px;
+    }
+
+    #forms {
+        margin: 5%;
+        gap: 25px;
+    }
 }
