@@ -567,20 +567,47 @@ footer{
     border-radius: 100px;
     width: 100%;
     font-family: var(--fontpequiena);
+    color: white;
 }
-
-.doe{
+#doe{
     color: var(--verde-texto);
     cursor: pointer;
     font-family: var(--fontgrande);
+    padding: 10px;
+    background-color: #7ca9824f;
+    border: var(--verde-apagado-escuro) 2px solid;
+    border-radius: 100px;
+    width: 100%;
+    font-family: var(--fontpequiena);
+    transition: all .3s ease;
+}
+#doe:hover{
+    transform: translateY(-3px);
+    background-color: var(--verde-escuro);
+}#doe:active{
+    background-color: var(--verde-apagado-escuro);
 }
 
 
 /* segundo formulario*/
 
-.enviar{
+#enviar{
     color: var(--verde-texto);
     cursor: pointer;
     font-family: var(--fontgrande);
+    padding: 10px;
+    background-color: #7ca9824f;
+    border: var(--verde-apagado-escuro) 2px solid;
+    border-radius: 100px;
+    width: 100%;
+    font-family: var(--fontpequiena);
+    transition: all .3s ease;
 
+}
+#enviar:hover{
+    transform: translateY(-3px);
+    background-color: var(--verde-escuro);
+}
+#enviar:active{
+    background-color: var(--verde-apagado-escuro);
 }
